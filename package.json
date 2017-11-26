@@ -1,0 +1,25 @@
+{
+  "name": "contribute-easy",
+  "version": "1.0.0",
+  "description": "Help other people to contribute to your project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "git-cz"
+  },
+  "author": "jumace",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^4.0.2",
+    "inquirer": "^4.0.0",
+    "node-fetch": "^1.7.3"
+  },
+  "devDependencies": {
+    "commitizen": "^2.9.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
