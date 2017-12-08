@@ -27,7 +27,7 @@ const issue = [
 		paginated: true,
 		choices: [],
 		when: function(answers) {
-			return answers.onIssue;
+			return answers.openIssue;
 		}
 	}
 ];
