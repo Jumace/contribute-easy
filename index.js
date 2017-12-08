@@ -50,7 +50,7 @@ async function main() {
 
 	Object.assign(answers, await inquirer.prompt(questions.firstTimer));
 
-	if (firstTimerAnswers.firstTime) {
+	if (answers.firstTime) {
 		// give the contributor more information about the contribution guidelines on the project
 	}
 
