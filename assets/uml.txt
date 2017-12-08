@@ -1,0 +1,48 @@
+@startuml
+[*] --> checkCbConfig
+checkCbConfig --> sayThanks : No
+sayThanks --> firstTime
+firstTime --> infoAboutContributing : Yes
+firstTime --> solveOpenIssue : No
+infoAboutContributing --> solveOpenIssue
+solveOpenIssue --> listOpenIssues : Yes
+listOpenIssues --> selectOpenIssue
+selectOpenIssue --> writeCbConfig
+solveOpenIssue --> writeCbConfig : No
+checkCbConfig --> contributeIsDone : Yes
+contributeIsDone --> createPullRequest : Yes
+createPullRequest --> deleteCbConfig
+deleteCbConfig --> [*]
+writeCbConfig --> [*]
+contributeIsDone --> [*] : No
+
+
+
+state checkCbConfig
+note right of checkCbConfig : System: Check if a config exists
+
+state sayThanks
+note right of sayThanks : Say: "You're awesome! Thanks for the contribution"
+
+state contributeIsDone
+note right of contributeIsDone : Ask: "Do you want to create a Pull Request?"
+
+state createPullRequest
+
+state firstTime
+note right of firstTime : Ask: "Is this your first contribution on this project?"
+
+state infoAboutContributing
+
+state solveOpenIssue
+note right of solveOpenIssue : Ask: "Is there an open issue you want to solve?"
+
+state listOpenIssues
+
+state selectOpenIssue
+
+state writeCbConfig
+
+state deleteCbConfig
+
+@enduml
