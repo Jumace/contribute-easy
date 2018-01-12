@@ -15,5 +15,8 @@ node index.js
 
 There is currently not more then a rough draft to show a possible direction.
 
+## Documentation
+
+![User flow](https://github.com/jumace/contribute-easy/raw/master/documentation/assets/uml-user-flow.png "User flow")
 
 
