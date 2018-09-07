@@ -1,6 +1,6 @@
 @startuml
-[*] --> checkCbConfig
-checkCbConfig --> sayThanks : No
+[*] --> checkCbLog
+checkCbLog --> sayThanks : No
 sayThanks --> firstTime
 firstTime --> infoAboutContributing : Yes
 firstTime --> solveOpenIssue : No
@@ -9,7 +9,7 @@ solveOpenIssue --> listOpenIssues : Yes
 listOpenIssues --> selectOpenIssue
 selectOpenIssue --> writeCbConfig
 solveOpenIssue --> writeCbConfig : No
-checkCbConfig --> contributeIsDone : Yes
+checkCbLog --> contributeIsDone : Yes
 contributeIsDone --> createPullRequest : Yes
 createPullRequest --> deleteCbConfig
 deleteCbConfig --> [*]
@@ -18,8 +18,8 @@ contributeIsDone --> [*] : No
 
 
 
-state checkCbConfig
-note right of checkCbConfig : System: Check if a config exists
+state checkCbLog
+note right of checkCbLog : System: Check if a log exists
 
 state sayThanks
 note right of sayThanks : Say: "You're awesome! Thanks for the contribution"

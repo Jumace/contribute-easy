@@ -4,7 +4,7 @@ const inquirer = require('inquirer');
 const openIssues = require('./test-data/open-issues.json');
 const questions = require('./questions');
 
-const configPath = 'cb-easy.json';
+const configPath = 'cb-easy-log.json';
 
 function createIssueArray() {
 	// noramlly we should fetch the data
