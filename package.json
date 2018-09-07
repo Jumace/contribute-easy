@@ -15,7 +15,8 @@
     "node-fetch": "^1.7.3"
   },
   "devDependencies": {
-    "commitizen": "^2.9.6"
+    "commitizen": "^2.9.6",
+    "git-cz": "^1.7.1"
   },
   "config": {
     "commitizen": {
